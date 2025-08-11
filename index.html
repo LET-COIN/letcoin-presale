@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Letcoin اكتتاب</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.6.0/dist/ethers.min.js"></script>
+</head>
+<body dir="rtl">
+  <main class="card">
+    <header class="hero">
+      <img src="logo.png" alt="Letcoin logo" class="logo" />
+      <h1>Letcoin — <span class="sub">اكتتاب</span></h1>
+    </header>
+
+    <section class="info">
+      <div class="row">
+        <div><strong>السعر</strong><br/>56,000 LEC = 1 BNB</div>
+        <div><strong>الهارد كاب</strong><br/>5,000,000 BNB</div>
+        <div><strong>إجمالي المعروض</strong><br/>1,000,000,000 LEC</div>
+      </div>
+
+      <div class="countdown">
+        <div>ينتهي بعد</div>
+        <div id="timer">-- : -- : -- : --</div>
+      </div>
+
+      <div class="contract-box">
+        <div><strong>عنوان العقد (Presale)</strong></div>
+        <input id="presaleAddress" placeholder="أدخل عنوان عقد الـPresale هنا أو الصقه" />
+        <div class="note">العنوان الذي يرسل إليه المبلغ لشراء التوكن. بعد نشر العقد انسخ عنوانه هنا.</div>
+      </div>
+
+      <div class="buy-box">
+        <button id="connectBtn" class="btn">Connect Wallet</button>
+        <input id="amount" placeholder="المبلغ بالـBNB" />
+        <button id="buyBtn" class="btn primary">Buy Token</button>
+      </div>
+
+      <div class="small-note">ملاحظة: تأكد من اختيار شبكة <strong>BNB (BSC)</strong> في ميتاماسك قبل الشراء.</div>
+    </section>
+
+    <footer class="footer">
+      <small>Letcoin — الإصدار التجريبي. لا تشتري على Mainnet بدون تدقيق أمني.</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
