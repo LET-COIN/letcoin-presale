@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LET-COIN Admin</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    // Token protection (Option A) - checks URL query parameter 'token'
+    (function(){
+      function getQuery(name){ const url = new URL(window.location.href); return url.searchParams.get(name); }
+      const token = getQuery('token') || '';
+      const expected = 'Ammar muslim';
+      if(token !== expected){
+        document.write('<div style="padding:40px;font-family:Inter,Arial,sans-serif;"><h2>Access denied</h2><p>غير مصرح. استخدم الرابط الخاص مع الرمز السري.</p></div>');
+        throw new Error('Access denied');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <header><div class="logo">LET-COIN — Admin</div></header>
+  <main class="admin-main">
+    <h2>Admin (صفحة مخفية)</h2>
+    <p>هذه الصفحة خاصة بك. رابط دخولك يحتوي الرمز السري.</p>
+
+    <label>Rate (LET per 1 BNB): <input id="adminRate" type="number" value="56000"></label>
+    <label>Hardcap ($): <input id="adminHardcap" type="number" value="5000000"></label>
+    <label>Presale duration days: <input id="adminDuration" type="number" value="90"></label>
+
+    <label>BNB/ETH Receiver address: <input id="adminReceiver" type="text" value="0x5fAE5Cca396C9A8e1F2a9bfCaBd72E9eF2530613"></label>
+    <label>SOL Receiver address: <input id="adminReceiverSol" type="text" value="AHm9uUXj47qj7krfHq5VCKt7BAJPC2Uu3kPRGj37Lage"></label>
+
+    <div class="admin-actions">
+      <button id="saveSettings">Save</button>
+      <button id="downloadCsv">Download CSV</button>
+      <button id="clearStorage">Clear Records</button>
+    </div>
+    <p class="note">ملاحظة: السجلات مخزنة في متصفحك (localStorage). تنزيل CSV سيجمع السجلات الحالية.</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
