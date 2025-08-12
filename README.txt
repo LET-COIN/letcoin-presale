@@ -1,22 +1,15 @@
 
-LET-COIN Presale (simulation-ready frontend)
--------------------------------------------
-This package includes a simulation-mode presale frontend ready to upload to GitHub Pages.
-Admin page protected by token in URL query parameter (use ?token=Ammar%20muslim).
-
+LET-COIN Presale — Fancy Gold & Black (simulation-ready)
+--------------------------------------------------------
 Files:
-- index.html
-- admin.html (access requires ?token=Ammar%20muslim)
-- script.js
-- styles.css
+- index.html (main fancy design)
+- admin.html (access with ?token=Ammar%20muslim)
+- styles.css, script.js
 - locales/ar.json, en.json, fr.json
 - README.txt
 
-Quick deploy on GitHub Pages:
-1) Upload files to repo root on GitHub.
-2) In Settings -> Pages set source to main branch / root and save.
-3) Visit https://<username>.github.io/<repo>/
-
-Security notes:
-- Admin protection is client-side token in URL. Keep the URL secret.
-- This is a simulation. Real transaction code is commented with TODO markers.
+How to deploy:
+1) Upload these files to your GitHub repo root.
+2) Settings -> Pages -> Branch: main, Folder: / (root). Save.
+3) Visit: https://<username>.github.io/<repo>/
+Admin: https://<username>.github.io/<repo>/admin.html?token=Ammar%20muslim
